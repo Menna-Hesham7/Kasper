@@ -206,7 +206,7 @@ header .container nav .form{
 /* ------------ Stert Landing ------------- */
 .landing{
     min-height: 100vh;
-    background-image: url("../images/pexels-erik-karits-10173090.jpg");
+    background-image: url("../images/Background-1-Home.jpg");
     background-size: cover;
     position: relative;
 }
@@ -353,7 +353,7 @@ display: flex;
     padding-bottom: var(--main-padding);
     height: 500px;
     position: relative;
-    background-image: url("../images/pexels-anni-roenkae-3435266.jpg");
+    background-image: url("../images/Background-2.jpg");
     background-size: cover;
     display: flex;
     align-items: center;
@@ -651,9 +651,14 @@ display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-@media (min-width:992px) {
-    .our-skills .container > div{
-        flex-basis: 45%;
+.our-Skills .container .testimonials,
+.our-Skills .container .skills{
+    flex-basis: 45%;
+}
+@media (max-width:992px) {
+    .our-Skills .container .testimonials,
+    .our-Skills .container .skills{
+        flex-basis: 100%;
     }
 }
 .our-Skills .container > div > h3{
@@ -705,8 +710,8 @@ display: flex;
     margin-bottom: 30px;
     }
 .our-Skills .container .testimonials .bullets li {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     border: 1px solid rgb(0, 0, 0);
     margin-right: 10px;
@@ -715,4 +720,370 @@ display: flex;
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
+.our-Skills .container .skills .prog-holder {
+    margin-bottom: 50px;
+}
+.our-Skills .container .skills .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.our-Skills .container .skills .prog-holder .prog {
+    background-color: #9c9c9c ;
+    height: 30px;
+}
+.our-Skills .container .skills .prog-holder .prog span {
+    display: block;
+    background-color: var(--main-color);
+    height: 100%;
+    position: relative;
+}
+.our-Skills .container .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: -40px;
+    right: -20px;
+    padding: 5px;
+    width: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+.our-Skills .container .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    border-width: 10px;
+    right:-6px;
+    top: -13px;
+}
 /*------------   End Our Skills   -------------*/
+
+
+/*------------   Srert Quote   -------------*/
+.quote{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../images/Quote-1.jpg);
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+.quote .container {
+    position: relative;
+}
+.quote q {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+    text-transform: uppercase;
+}
+/*------------   End Quote   -------------*/
+
+
+
+/*------------   Srert Pricing   -------------*/
+.pricing {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.pricing .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.pricing .plans .plan {
+    text-align: center;
+    background-color: white;
+}
+.pricing .plans .plan  .head{
+    padding: 20px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head h3 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.pricing .plans .plan  .head span {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+}
+.pricing .plans .plan  .head span::before{
+    content: "$";
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    left: -15px;
+    margin-right: 30px;
+    font-weight: normal;
+}
+.pricing .plans .plan  .head span::after{
+    content: "/Mo";
+    font-size: 20px;
+    position: absolute;
+    top: 40px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+.pricing .plans .plan  ul {
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+    content: "";
+    width: 150px;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.pricing .plans .plan .foot a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+}
+.pricing .container .contact-text{
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+}
+.pricing .container .contact-link{
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+/*------------   End Pricing   -------------*/
+
+
+/*------------   Stert Subscribe   -------------*/
+.subscribe{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-image: url(../images/Subscribe-1.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.subscribe::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:991px) {
+    .subscribe .container{
+        flex-direction: column;
+    }
+}
+.subscribe form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+.subscribe form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+.subscribe form input[type="email"] {
+    border: 1px solid white;
+    border-right: none;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+}
+.subscribe form input[type="submit"] {
+    width: 130px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-left: none;
+    text-transform: uppercase;
+}
+.subscribe form ::placeholder {
+    color: white;
+}
+.subscribe p {
+    line-height: 2;
+    margin-left: 50px;
+    text-align: center;
+}
+@media (max-width: 991px) {
+    .subscribe p {
+        margin: 30px 0 0;
+    }
+}
+/*------------   End Subscribe   -------------*/
+
+
+
+
+/*------------   Stert Contact Us   -------------*/
+.contact-us{
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+.contact-us .content{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:767px) {
+    .contact-us .content{
+        flex-direction: column;
+    }
+}
+.contact-us .content form{
+    flex-basis: 70%;
+}
+.contact-us .content form .main-input{
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.contact-us .content form textarea{
+    height: 200px;
+}
+.contact-us .content form input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    border: none;
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.contact-us .content .info {
+    flex-basis: 20%;
+    margin-top: -90px;
+}
+@media (max-width:767px){
+    .contact-us .content .info {
+        display: flex;
+        justify-content: space-around;
+        margin-top: -50px;
+    }
+}
+.contact-us .content .info h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.contact-us .content .info span {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+.contact-us .content .info h4:last-of-type{
+    margin-top: 100px;
+}
+.contact-us .content .info address{
+color: #777;
+line-height: 1.5;
+}
+
+/*------------   End Contact Us   -------------*/
+
+
+/*------------   Stert Footer   -------------*/
+.footer{
+    padding-top: calc(var(--main-padding) / 2);
+    padding-bottom: calc(var(--main-padding) / 2);
+    background-image: url(../images/Footer-1.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.footer::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+.footer .container {
+    position: relative;
+}
+.footer .container .logo{
+    margin: 20px auto;
+    display: flex;
+    width: 150px;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+}
+.footer .container img{
+    width: 35px;
+}
+.footer .container .logo P{
+    color: white;
+    font-weight: bold;
+    font-size: 17PX;
+    padding: 10px;
+    margin: 4px;
+    border: 0;
+}
+.footer p:first-of-type{
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid white;
+    font-size: 22px;
+    width: fit-content;
+    margin: 20px auto;
+}
+.footer .social-icons i {
+    padding: 10px 15px;
+}
+.footer .copyright {
+    margin-top: 40px;
+}
+.footer .copyright span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+/*------------   End Footer -------------*/

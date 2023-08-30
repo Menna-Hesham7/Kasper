@@ -2,6 +2,8 @@
 :root {
     --main-color:#196ac7a1 ;
     --text-color:#777;
+    --body-color: #e3e0e0;
+    --background-spac-color:#fdfdfd;
     --main-padding: 100px ;
 }
 /* End Variables */
@@ -22,7 +24,7 @@ html {
 }
 body {
     font-family: "Open Sans", sans-serif;
-    background-color: #e3e0e0;
+    background-color: var(--body-color);
 }
 ul {
     list-style: none;
@@ -130,15 +132,6 @@ header .container .logo{
     display: flex;
     align-items: center;
 }
-header .container img{
-    width: 35px;
-}
-header .container P{
-    color: white;
-    font-weight: bold;
-    font-size: 17PX;
-    padding: 5px;
-}
 header .container nav{
     display: flex;
     align-items: center;
@@ -220,7 +213,7 @@ header .container nav .form{
 }
 .landing .text {
     color: rgb(255, 255, 255);
-    background-color: #337dd1a1;
+    background-color: var(--main-color);
     width: 50%;
     padding: 30px;
     margin-top: 20px;
@@ -369,11 +362,11 @@ display: flex;
     background-color: rgb(0 0 0 / 50%);
 }
 .design img{
-    height: 400px;
-    bottom: -50px;
+    height: 310px;
+    bottom: -40px;
     z-index: 2;
     position: absolute;
-    left: 185px;
+    left: 120px;
 }
 @media (max-width:768px) {
     .design img{
@@ -563,9 +556,10 @@ display: flex;
 }
 .about img {
     position: relative;
-    bottom: -120px;
+    bottom: -110px;
     margin-top: -120px;
     max-width: 60%;
+    left: -22px;
 }
 @media (max-width: 767px) {
     .about img {
@@ -668,7 +662,7 @@ display: flex;
     text-transform: uppercase;
 }
 .our-Skills .container > div > p{
-    color: #777;
+    color: var(--text-color);
     line-height: 1.5;
     text-align: center;
     margin-bottom: 60px;
@@ -694,11 +688,11 @@ display: flex;
 }
 .our-Skills .container .testimonials .content .text{
     line-height: 1.6;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--main-color);
     font-size: large;
 }
 .our-Skills .container .testimonials .content .text p {
-    color: #777;
+    color: #616060;
     text-align: right;
     font-size: 14px;
     margin-bottom: 10px;
@@ -806,7 +800,7 @@ display: flex;
 }
 .pricing .plans .plan {
     text-align: center;
-    background-color: white;
+    background-color: var(--background-spac-color);
 }
 .pricing .plans .plan  .head{
     padding: 20px 20px;
@@ -923,7 +917,7 @@ display: flex;
     left: 25px;
 }
 .subscribe form input[type="email"] {
-    border: 1px solid white;
+    border: 1px solid var(--background-spac-color);
     border-right: none;
     background: none;
     padding: 20px 20px 20px 60px;
@@ -933,14 +927,14 @@ display: flex;
 .subscribe form input[type="submit"] {
     width: 130px;
     background-color: var(--main-color);
-    color: white;
+    color: var(--background-spac-color);
     padding: 10px 20px;
-    border: 1px solid white;
+    border: 1px solid var(--background-spac-color);
     border-left: none;
     text-transform: uppercase;
 }
 .subscribe form ::placeholder {
-    color: white;
+    color: var(--background-spac-color);
 }
 .subscribe p {
     line-height: 2;
@@ -978,11 +972,13 @@ display: flex;
     padding: 20px;
     display: block;
     border: 1px solid #ccc;
+    background-color: var(--background-spac-color);
     margin-bottom: 30px;
     width: 100%;
 }
 .contact-us .content form textarea{
     height: 200px;
+    background-color: var(--background-spac-color);
 }
 .contact-us .content form input[type="submit"] {
     background-color: var(--main-color);
@@ -1013,14 +1009,14 @@ display: flex;
 }
 .contact-us .content .info span {
     display: block;
-    color: #777;
+    color: var(--text-color);
     margin-bottom: 10px;
 }
 .contact-us .content .info h4:last-of-type{
     margin-top: 100px;
 }
 .contact-us .content .info address{
-color: #777;
+color: var(--text-color);
 line-height: 1.5;
 }
 
@@ -1029,8 +1025,8 @@ line-height: 1.5;
 
 /*------------   Stert Footer   -------------*/
 .footer{
-    padding-top: calc(var(--main-padding) / 2);
-    padding-bottom: calc(var(--main-padding) / 2);
+    padding-top: calc(var(--main-padding) / 4);
+    padding-bottom: calc(var(--main-padding) / 4);
     background-image: url(../images/Footer-1.jpg);
     background-size: cover;
     position: relative;
@@ -1057,17 +1053,6 @@ line-height: 1.5;
     justify-content: center;
     height: 55px;
 }
-.footer .container img{
-    width: 35px;
-}
-.footer .container .logo P{
-    color: white;
-    font-weight: bold;
-    font-size: 17PX;
-    padding: 10px;
-    margin: 4px;
-    border: 0;
-}
 .footer p:first-of-type{
     text-transform: uppercase;
     padding: 20px;
@@ -1086,4 +1071,44 @@ line-height: 1.5;
     font-weight: bold;
     color: var(--main-color);
 }
+.footer .menna{
+    margin: 20px auto;
+    font-weight: bold;
+    color: var(--main-color);
+}
 /*------------   End Footer -------------*/
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--body-color);
+    box-shadow: 0 0 10px #ddd inset;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color) ;
+    border-radius: 20px;
+    color: var();
+}
+
+
+
+@media (prefers-color-scheme:dark) {
+    :root {
+        --main-color: #3c618ba1;
+        --text-color: #000000;
+        --body-color: #979797;
+        --background-spac-color:#dbdbdb;
+    }
+}
+@media (prefers-color-scheme:light) {
+    :root {
+        --main-color:#196ac7a1 ;
+        --text-color:#777;
+        --body-color: #e3e0e0;
+        --background-spac-color:#fdfdfd;
+    }
+}

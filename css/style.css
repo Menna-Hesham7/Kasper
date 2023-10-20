@@ -179,6 +179,10 @@ header  nav ul li a{
     font-size: 14px;
     font-weight: bold;
 }
+header  nav ul li a:hover{
+    color: blue;
+    border-bottom: 1px blue solid;
+}
 header  nav ul li .active{
     color: blue;
     border-bottom: 1px blue solid;
@@ -426,6 +430,11 @@ display: flex;
 }
 .portfolio .shuffle li {
     padding: 15px;
+    transition: .3s;
+}
+.portfolio .shuffle li:hover{
+    background-color: var(--main-color);
+    color: white;
 }
 .portfolio .shuffle .active{
     background-color: var(--main-color);
@@ -485,6 +494,9 @@ display: flex;
     margin: 30px auto;
     text-decoration: none;
     text-transform: uppercase;
+}
+.portfolio .more:hover{
+    background-color: #616060;
 }
 /*------------   End Portfolio   -------------*/
 
@@ -859,6 +871,9 @@ display: flex;
     width: fit-content;
     margin: 30px auto;
 }
+.pricing .plans .plan .foot a:hover{
+    background-color: var(--main-color);
+}
 .pricing .container .contact-text{
     text-align: center;
     margin: 50px auto 20px;
@@ -872,6 +887,9 @@ display: flex;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
+}
+.pricing .container .contact-link:hover{
+    background-color: #616060;
 }
 /*------------   End Pricing   -------------*/
 
@@ -989,6 +1007,9 @@ display: flex;
     margin-left: auto;
     text-transform: uppercase;
     cursor: pointer;
+}
+.contact-us .content form input[type="submit"]:hover{
+    background-color: #616060;
 }
 .contact-us .content .info {
     flex-basis: 20%;
